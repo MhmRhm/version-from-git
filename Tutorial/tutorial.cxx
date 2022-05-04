@@ -5,6 +5,6 @@
 
 int main()
 {
-	std::cout << std::format("Build Info: {}\n{}\n{}\n{}", GIT_BRANCH, GIT_TAG, GIT_COMMIT, GIT_DATE) << std::endl;
-	return 0;
+    std::cout << std::format("Build Info: {}\n{}\n{}\n{}", FromGit::BRANCH, FromGit::TAG, FromGit::COMMIT, FromGit::DATE) << std::endl;
+    return 0;
 }

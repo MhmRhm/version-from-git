@@ -12,9 +12,10 @@ Consider the following C++ program:
 
 int main()
 {
-	std::cout << std::format("Build Info: {}\n{}\n{}\n{}",
-        GIT_BRANCH, GIT_TAG, GIT_COMMIT, GIT_DATE) << std::endl;
-	return 0;
+    std::cout << std::format("Build Info: {}\n{}\n{}\n{}",
+        FromGit::BRANCH, FromGit::TAG, FromGit::COMMIT, FromGit::DATE) << 
+        std::endl;
+    return 0;
 }
 ```
 
@@ -113,11 +114,14 @@ This file is actually a `.h` file that is loaded with cmake related variables to
 
 ```c
 #pragma once
-#include<string_view>
-const std::string_view GIT_COMMIT{ "@GIT_COMMIT@" };
-const std::string_view GIT_TAG{ "@GIT_TAG@" };
-const std::string_view GIT_BRANCH{ "@GIT_BRANCH@" };
-const std::string_view GIT_DATE{ "@GIT_DATE@" };
+#include <string_view>
+namespace FromGit
+{
+    const std::string_view COMMIT{"@GIT_COMMIT@"};
+    const std::string_view TAG{"@GIT_TAG@"};
+    const std::string_view BRANCH{"@GIT_BRANCH@"};
+    const std::string_view DATE{"@GIT_DATE@"};
+}
 ```
 
 ## Last Step
