@@ -12,7 +12,7 @@ Consider the following C++ program:
 
 int main()
 {
-	std::cout << std::format("Build Info: {}-{}-{}-{}",
+	std::cout << std::format("Build Info: {}\n{}\n{}\n{}",
         GIT_BRANCH, GIT_TAG, GIT_COMMIT, GIT_DATE) << std::endl;
 	return 0;
 }
@@ -28,7 +28,7 @@ mkdir ../build
 cd ../build
 ```
 
-Or if you are using the *QtCreator*, go to the *Projects* tab on the left-hand side of the IDE, choose the right *kit*, and on the build tab select the **Shadow build**.
+Or if you are using the *QtCreator*, go to the *Projects* tab on the left-hand side of the IDE, choose the correct *kit*, and on the build tab select the **Shadow build**.
 
 And if you are using the *Microsoft Visual Studio*, right-click on `CMakeLists.txt` and choose *CMake Settings for...*, then change *Build root* to something like below:
 
