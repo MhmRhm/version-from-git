@@ -1,0 +1,6 @@
+#pragma once
+#include<string_view>
+const std::string_view GIT_COMMIT{ "@GIT_COMMIT@" };
+const std::string_view GIT_TAG{ "@GIT_TAG@" };
+const std::string_view GIT_BRANCH{ "@GIT_BRANCH@" };
+const std::string_view GIT_DATE{ "@GIT_DATE@" };
