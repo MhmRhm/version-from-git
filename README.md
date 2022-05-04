@@ -13,7 +13,7 @@ Consider the following C++ program:
 int main()
 {
     std::cout << std::format("Build Info: {}\n{}\n{}\n{}",
-        FromGit::BRANCH, FromGit::TAG, FromGit::COMMIT, FromGit::DATE) << 
+        FromGit::Branch, FromGit::Tag, FromGit::Commit, FromGit::Date) <<
         std::endl;
     return 0;
 }
@@ -117,10 +117,10 @@ This file is actually a `.h` file that is loaded with cmake related variables to
 #include <string_view>
 namespace FromGit
 {
-    const std::string_view COMMIT{"@GIT_COMMIT@"};
-    const std::string_view TAG{"@GIT_TAG@"};
-    const std::string_view BRANCH{"@GIT_BRANCH@"};
-    const std::string_view DATE{"@GIT_DATE@"};
+    const std::string_view Commit{"@GIT_COMMIT@"};
+    const std::string_view Tag{"@GIT_TAG@"};
+    const std::string_view Branch{"@GIT_BRANCH@"};
+    const std::string_view Date{"@GIT_DATE@"};
 }
 ```
 
